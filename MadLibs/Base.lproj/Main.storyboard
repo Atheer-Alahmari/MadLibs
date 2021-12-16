@@ -16,9 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIg-vl-lhr">
-                                <rect key="frame" x="139.5" y="274" width="41.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIg-vl-lhr">
+                                <rect key="frame" x="5" y="284" width="310" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -26,8 +26,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LIg-vl-lhr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jde-8f-hZC"/>
-                            <constraint firstItem="LIg-vl-lhr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nsA-ln-e8b"/>
+                            <constraint firstItem="LIg-vl-lhr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dPd-9B-G57"/>
+                            <constraint firstItem="LIg-vl-lhr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="i0W-g3-1tl"/>
+                            <constraint firstAttribute="trailing" secondItem="LIg-vl-lhr" secondAttribute="trailing" constant="5" id="kNm-L5-WTF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5MD-TN-2Ac">
@@ -46,6 +47,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="setence_Label" destination="LIg-vl-lhr" id="x4j-Wo-xnc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,6 +109,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="d9L-e0-2G8" kind="unwind" unwindAction="unwind:" id="sxi-dn-mgk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gvg-SW-LJO"/>
@@ -118,8 +125,15 @@
                             <constraint firstItem="csL-zb-hu3" firstAttribute="leading" secondItem="Gvg-SW-LJO" secondAttribute="leading" constant="15" id="rXG-JO-5cw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adj_TF" destination="0yk-8w-Krx" id="8oQ-ML-Lf9"/>
+                        <outlet property="noun_TF" destination="BMn-B4-mac" id="xBF-r0-RLu"/>
+                        <outlet property="verb1_TF" destination="FYj-h1-EMa" id="HEF-hP-jR1"/>
+                        <outlet property="verb2_TF" destination="08B-b9-ehF" id="W8y-1e-iBQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjh-ZL-dLz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="d9L-e0-2G8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1676.25" y="107.74647887323944"/>
         </scene>
